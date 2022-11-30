@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "@salutejs/scenario": "^0.26.0",
+    "dialute": "^0.0.38"
+  }
+}
