@@ -67,11 +67,10 @@ function* script(r: SberRequest, rs: SberResponse) {
             } else if (r.act?.action_id === 'start') {
                 rsp.kbrd = ['Оценить','Правила'];
                 let phraseIndex = Math.floor(Math.random() * start_messages.length);
-                phrase = start_messages[phraseIndex];
+                phrase = start_messages[phraseIndex] + ` Чтобы вернуться в главное меню ${(appeal === 'official' ? 'нажмите вправо или скажите' : 'нажми вправо или скажи')} «стоп»`;
                 rsp.msg = phrase;
-                // rsp.data = {type: 'start'};
-            }
-            else if (r.act?.action_id === 'rules') {
+                rsp.data = {type: 'start'};
+            } else if (r.act?.action_id === 'rules') {
                 rsp.msg = `Данная игра разделена на два блока. В первом блоке «Эрудиция» ${(appeal === 'official' ? 'вам' : 'тебе')} надо будет ответить на вопросы на тему основ финансовой грамотности. 
                 За каждый правильный ответ будут начисляться внутриигровые деньги. Во втором блоке «Инвестиция» ${(appeal === 'official' ? 'вам' : 'тебе')} нужно будет вложить свои заработанные средства, чтобы заработать больше. 
                 ${(appeal === 'official' ? 'Помните' : 'Помни')}, что иногда ${(appeal === 'official' ? 'ваши' : 'твои')} инвестиции могут оказаться убыточными. Удачи!`;
