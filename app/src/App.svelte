@@ -13,9 +13,9 @@
     let started_invest = 0;
     let assistant;
     let started_from_voice = false;
-    let token = "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2NGY5MzMwNjQ3MjJiN2M2Zjc1MTdiNGEwNGU5Y2Q1N2I3YmFhZGU1ZGRhODNlOTU4ZWM5MmZhYTk5ZDUwMTNmNTM5YmU5MjcwMDQyNjI5OCIsImF1ZCI6IlZQUyIsImV4cCI6MTY2OTkxODYyNCwiaWF0IjoxNjY5ODMyMjE0LCJpc3MiOiJLRVlNQVNURVIiLCJ0eXBlIjoiQmVhcmVyIiwianRpIjoiYjg2MzNjZTMtMjdlZS00ZjdlLWFlZTEtODEzZGZlZTUxZjI4Iiwic2lkIjoiZDNiNjQ3MjgtYjM0Ni00ZmI0LTk2NzktMWFlMTk2YmM5OWYzIn0.YEIUYFSef2SR4w1-l6kEckqMxk5tq2oOhnpNeqUtn7p_jjLze8CTQGECCWJWyBavpYV-RTIii4Dov68Gw9F2de6orZUpT3aQKXnmikZmx0mht3xYMoK02k1RqXljNO-06GJ4hgVeyE-HrWvd08J2tAtNWG2SK50ypMNtimnekijNGBJktRVz4EtY83nPEFL7BgGRDqkBpTxoHPRlH2MyzNVuPMqxcK9LEEo6VtJ59f6ALW_iyxhg-QUsG73qV47IFpilpWaK0TUCOLUOm3rVYg12dU0c3ZTfNlytAWyiyR3qv3A9ZxGGGpGyruOlGKMcrMdtz4645z8ez_ISvrss_WlTYPHYLqfBiamTaV-o0ni3YhzAjFEAmKpf8x5p1NUeyrXv4bFBvDwoFyzj4pwNNZx9reEkB-29p9lu0plEnMVByf7xdyOz7eLppnD8ImZRsd72FaIzbooKcZR8T-RjZzLVIuQATiP6DRrx0qYWcFDidGZkJGfJ7t4xsojnPVrFOQpwHx6bSRGM4FUQMqo2TKlTBfMmIg-YwNpMSHP82HYHR7ctkeirdTsk8IP3qbqBxpygX2ip6-f71ubI5Eob1htylh3Vvhcl4gCzDn0usMahWezIspTBk8eH1nBOG0UGHpsvrOnw2MRzmQbghZERdfZRvg1ITCZWa9okf7BSSVI";
+    let token = "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2NGY5MzMwNjQ3MjJiN2M2Zjc1MTdiNGEwNGU5Y2Q1N2I3YmFhZGU1ZGRhODNlOTU4ZWM5MmZhYTk5ZDUwMTNmNTM5YmU5MjcwMDQyNjI5OCIsImF1ZCI6IlZQUyIsImV4cCI6MTY3MDAxMjI5OCwiaWF0IjoxNjY5OTI1ODg4LCJpc3MiOiJLRVlNQVNURVIiLCJ0eXBlIjoiQmVhcmVyIiwianRpIjoiZTI0NzNmMjgtZjEwOS00ZWZhLTgwMmYtZGM1ZGEwZDQ3NjYyIiwic2lkIjoiZGQwMmY0YTgtNGU3Ni00MzgxLWIyZTktYTk3NWY3YmFlNWMxIn0.fEe1Pw1KewkRO_95bh-jpoq9b3DDkExwvXQuVodT5suEabOzKoZUXBjfIN0e_GhCjiYsDv1HC7J7WGpxdLDKpy-RVo1Yoj1CRPYizNM-NHxu3pk1UBcx82NOw0iRSr81P9aYVlDpCJ-VaYwW6zcONk1g5OELYvC2usAFMeTv_44ymRQcYzkkD1dUiLGsPiAv7rE-O7C_QU06LBrfNXcEcn-qgk2IWn1XWbbCkCBwMTzOq5kzqrN2YnruFZ5OjyNdg97OyONVLPtGDa-uH7hbnwWdyfEzW3Mz42ZyraUugLzOeYWky5MnOPFhnTpiu_NaF_c3HVY9Y_5Lv3ST9j62u-Qd3GRlwj5jV6Qh-4DL7n_fvvNH1iRskkpK7PmD7XHlbd0SXb1DPR2OwgG3s909GNJ8uPEnNvQzVhW4r0BEng4kw61sJ3uLJ3R9J7loflrCZVWqFyOM9Jn99Eqr5an2u75xbv-XTXLmSU5_jQ0A-6DA0RiIE4U71gGK4Z5lQEL9HGGcNbZ5Z9Sl3JBtT7X6ApiGa9lA7qM83ZBNKQkwKsFnw4jLId6v6dasBHpv3FMcXLmQhvagmL7rc5wRX3oCt3KXLXlqG6whHBQVwU0zPntZMB8Kro0uU9t4lFck85XcwfKpLUYaJ0aj5Kl75ZdqgX8jyX_L69u1BNPDCgkITTg";
 // Set the name of your SmartApp for activation
-    let initPhrase = 'запусти Игра Инвестомания';
+    let initPhrase = 'запусти Инвестомания';
     let character = 'joy'; // default, before sber client gets state
     let temp = "";
     let questions = [" Финансовая свобода — это… " ,
@@ -399,7 +399,13 @@
     logger.log(questions.length,answers.length,right_answers.length);
     let used = Array(right_answers.length).fill(false);
     let questions_invest = 
-      ["Куда разумнее вложить свои деньги на год?"];
+      ["Куда разумнее вложить свои деньги на год?",
+      "Во что лучше всего вложиться?",
+      "Куда лучше инвестировать свои деньги?",
+      "Во что вложить деньги, чтобы приумножить их?",
+      "Куда разумнее вложить свои деньги на короткий срок?",
+      "Куда разумнее вложить свои деньги на долгий срок?",
+      "Куда разумнее вложить свои деньги на средний срок?"];
     let answers_invest = 
       [["Акции","Облигации","Никуда"],
       ["Фонды","Валюта","Никуда"],
@@ -429,32 +435,32 @@
       ["На вклад в банк под 0,9% в месяц","50% в акции, 50% в облигации","Никуда"]
     ];
     let koeffs_invest = 
-      [[Math.floor(Math.random() * 50 - 20), Math.floor(Math.random() * 5 + 5),0],
-      [Math.floor(Math.random() * 18 - 5),Math.floor(Math.random() * 15 - 9),0],
-      [Math.floor(Math.random() * 10 - 6),Math.floor(Math.random() * 4 + 6),0],
-      [Math.floor(Math.random() * 7 + 4),Math.floor(Math.random() * 4 + 6),0],
-      [Math.floor(Math.random() * 18 - 5),Math.floor(Math.random() * 40 - 16),0],
-      [Math.floor(Math.random() * 4 + 6),Math.floor(Math.random() * 40 - 18),0],
-      [Math.floor(Math.random() * 12 - 7),Math.floor(Math.random() * 45 - 19),0],
-      [Math.floor(Math.random() * 50 - 20),Math.floor(Math.random() * 18 - 5),0],
-      [Math.floor(Math.random() * 36 - 20),11,0],
-      [9,Math.floor(Math.random() * 10 - 6),0],
-      [10,Math.floor(Math.random() * 15 - 9),0],
-      [Math.floor(Math.random() * 50 - 30),8,0],
-      [Math.floor(Math.random() * 36 - 20),Math.floor(Math.random() * 50 - 20),0],
-      [Math.floor(Math.random() * 40 - 16),Math.floor(Math.random() * 15 - 9),0],
-      [Math.floor(Math.random() * 40 - 18),Math.floor(Math.random() * 15 - 9),0],
-      [Math.floor(Math.random() * 45 - 19),Math.floor(Math.random() * 7 + 4),0],
-      [Math.floor(Math.random() * 23 - 8),Math.floor(Math.random() * 41 - 15),0],
-      [Math.floor(Math.random() * 23 - 8),Math.floor(Math.random() * 14 - 4),0],
-      [Math.floor(Math.random() * 23 - 8),Math.floor(Math.random() * 12 - 2),0],
-      [Math.floor(Math.random() * 50 - 20),Math.floor(Math.random() * 23 - 8),0],
-      [Math.floor(Math.random() * 5 + 5),Math.floor(Math.random() * 23 - 8),0],
-      [Math.floor(Math.random() * 50 - 20),Math.floor(Math.random() * 12 - 2),0],
-      [Math.floor(Math.random() * 5 + 5),Math.floor(Math.random() * 12 - 2),0],
-      [12,Math.floor(Math.random() * 23 - 8),0],
-      [14,Math.floor(Math.random() * 23 - 8),0],
-      [11,Math.floor(Math.random() * 23 - 8),0]
+      [[Math.floor(Math.random() * 60 - 20), Math.floor(Math.random() * 15 + 5),0],
+      [Math.floor(Math.random() * 28 - 5),Math.floor(Math.random() * 25 - 9),0],
+      [Math.floor(Math.random() * 20 - 6),Math.floor(Math.random() * 14 + 6),0],
+      [Math.floor(Math.random() * 17 + 4),Math.floor(Math.random() * 14 + 6),0],
+      [Math.floor(Math.random() * 28 - 5),Math.floor(Math.random() * 50 - 16),0],
+      [Math.floor(Math.random() * 14 + 6),Math.floor(Math.random() * 50 - 18),0],
+      [Math.floor(Math.random() * 22 - 7),Math.floor(Math.random() * 55 - 19),0],
+      [Math.floor(Math.random() * 60 - 20),Math.floor(Math.random() * 28 - 5),0],
+      [Math.floor(Math.random() * 46 - 20),11,0],
+      [9,Math.floor(Math.random() * 20 - 6),0],
+      [10,Math.floor(Math.random() * 25 - 9),0],
+      [Math.floor(Math.random() * 60 - 30),8,0],
+      [Math.floor(Math.random() * 46 - 20),Math.floor(Math.random() * 60 - 20),0],
+      [Math.floor(Math.random() * 50 - 16),Math.floor(Math.random() * 25 - 9),0],
+      [Math.floor(Math.random() * 50 - 18),Math.floor(Math.random() * 25 - 9),0],
+      [Math.floor(Math.random() * 55 - 19),Math.floor(Math.random() * 17 + 4),0],
+      [Math.floor(Math.random() * 33 - 8),Math.floor(Math.random() * 61 - 15),0],
+      [Math.floor(Math.random() * 33 - 8),Math.floor(Math.random() * 24 - 4),0],
+      [Math.floor(Math.random() * 33 - 8),Math.floor(Math.random() * 22 - 2),0],
+      [Math.floor(Math.random() * 60 - 20),Math.floor(Math.random() * 33 - 8),0],
+      [Math.floor(Math.random() * 15 + 5),Math.floor(Math.random() * 33 - 8),0],
+      [Math.floor(Math.random() * 60 - 20),Math.floor(Math.random() * 22 - 2),0],
+      [Math.floor(Math.random() * 15 + 5),Math.floor(Math.random() * 22 - 2),0],
+      [12,Math.floor(Math.random() * 33 - 8),0],
+      [14,Math.floor(Math.random() * 33 - 8),0],
+      [11,Math.floor(Math.random() * 33 - 8),0]
       ];
 
 
@@ -496,17 +502,18 @@
                   start();
                 }
                 else if (event.smart_app_data.type === 'close') {
+                  loading_end();
                   close();
                 }
                 else if (event.smart_app_data.type === 'completed') {
-                  loading_start2();
-                  setTimeout(loading_end, 5000);
-                  setTimeout(start_invest, 5000);
+                  setTimeout(loading_start2, 3000);
+                  setTimeout(loading_end, 6000);
+                  setTimeout(start_invest, 3000);
                 }
                 else if (event.smart_app_data.type === 'completed invest') {
-                  loading_start2();
-                  setTimeout(loading_end, 5000);
-                  setTimeout(completed_invest, 5000);
+                  setTimeout(loading_start2, 3000);
+                  setTimeout(loading_end2, 6000);
+                  setTimeout(completed_invest, 3000);
                 }
                 logger.log(event);
             };
@@ -544,12 +551,20 @@
       document.getElementById('third').style.visibility = "visible"
       // document.getElementById('close').tabIndex = 4;
     }
+    const loading_end2 = () => {
+      document.getElementById('game').style.display="flex";
+      document.getElementById('prepare').style.display="none";
+      document.getElementById('moneybox').style.display="none";
+      document.getElementById('first').style.display="none";
+      document.getElementById('second').style.display="none";
+      document.getElementById('third').style.display="none";
+      document.getElementById('sum').style.display="none";
+    }
     const start_invest = () => {
       window.document.body.classList.toggle('invest');
       add_questions_invest();
     }
     const start = () => {
-      logger.log("here");
       window.document.body.classList.toggle('start');
       loading_start();
       choose_questions();
@@ -564,7 +579,7 @@
       started_from_voice = false;
       howmuch++;
        setTimeout(loading_end, 5000);
-       setTimeout(add_question, 5000);
+       setTimeout(add_question, 1000);
    }
     const rules = () => {  
       assistant.sendData({
@@ -577,6 +592,7 @@
       if (window.document.body.className == 'start' || window.document.body.className == 'start invest') {
         window.document.body.className = '';
         started = 0;
+        started_invest = 0;
         document.getElementById('menu').style.display="block";
         document.getElementById('game').style.display="none";
         document.getElementById('start').tabIndex = 1;
@@ -584,25 +600,20 @@
         document.getElementById('first').tabIndex = -1;
         document.getElementById('second').tabIndex = -1;
         document.getElementById('third').tabIndex = -1;
-        assistant.sendData({
-                action: {
-                    action_id: 'close'
-                }
-            });
       }
     }
     document.addEventListener('keydown', function(event) {    
         switch(event.keyCode) { 
     case 37: 
       // Влево
-      //   close();
+      document.getElementById('close').focus();
       break;
     case 40:
       // Вниз
       break;
     case 39:
       // Вправо
-         close();
+      document.getElementById('close').focus();
       break;
     case 38:
       // Вверх
@@ -612,14 +623,8 @@
     let indexes_invest = Array(amount_of_questions_invest).fill(0);
 
     const completed_invest = () => {
-      document.getElementById('moneybox').style.display="none";
-      document.getElementById('first').style.display="none";
-      document.getElementById('second').style.display="none";
-      document.getElementById('third').style.display="none";
       let sum = document.getElementById('sum').textContent;
-      document.getElementById('sum').style.display="none";
       document.getElementById('table').innerHTML = "Поздравляем! Выигрыш составил: <br/>" + sum;
-      logger.log("here");
       assistant.sendData({
                 action: {
                     action_id: 'congratulations'
@@ -627,14 +632,12 @@
             });
     }
     const choose_questions = () =>  {
-      if (howmuch >= (Math.floor(questions.length / amount_of_questions) - 1)) {
+      if (howmuch >= (Math.floor(questions.length / amount_of_questions) - 1) || howmuch > (Math.floor(questions_invest.length / amount_of_questions_invest) - 1) ) {
         howmuch = 0;
-        for (let i = 0; i < used.length; i++)
+        for (let i = 0; i < used.length; i++) {
           used[i] = false;
-      }
-      if (started_invest >= (answers_invest.length / amount_of_questions_invest -1)) {
-        for (let i = 0; i < used_invest.length; i++)
           used_invest[i] = false;
+        }
       }
       let count = 0;
       let count_invest = 0;
@@ -659,6 +662,8 @@
     }
     logger.log(indexes);
     const add_questions_invest = () => {
+      logger.log(indexes_invest);
+      logger.log(started_invest);
       let i = indexes_invest[started_invest];
       // let j1 = Math.floor(Math.random() * answers_invest[i].length);
       // let j2 = Math.floor(Math.random() * answers_invest[i].length);
@@ -668,7 +673,8 @@
       // while (j3 == j2 || j3 == j1)
       //   j3 = Math.floor(Math.random() * answers_invest[i].length);
       logger.log(i);
-      let question = questions_invest[0];
+      let j = Math.floor(Math.random()*questions_invest.length);
+      let question = questions_invest[j];
       let answer1 = answers_invest[i][0];
       let answer2 = answers_invest[i][1];
       let answer3 = answers_invest[i][2];
@@ -745,12 +751,13 @@
           }
           sum+= "₽";
           document.getElementById('sum').innerHTML = sum;
+          if (started != amount_of_questions) {
           assistant.sendData({
                   action: {
                       action_id: 'good'
                   }
               });
-        }
+        }}
         else {
           document.getElementById('first').style.background = "Red";
           if (sum_int > 1000)
@@ -758,12 +765,13 @@
           sum = sum_int.toString()
           sum+= " ₽";
           document.getElementById('sum').innerHTML = sum;
+          if (started != amount_of_questions) {
           assistant.sendData({
                   action: {
                       action_id: 'bad'
                   }
               });
-        }
+        }}
         document.getElementById('first').tabIndex = -1;
         document.getElementById('second').tabIndex = -1;
         document.getElementById('third').tabIndex = -1;
@@ -789,6 +797,12 @@
         let sum = document.getElementById('sum').textContent;
         let sum_int = parseInt(sum.replace(/\s/g, "").substring(0,sum.length-1));
         let koeff = koeffs_invest[indexes_invest[started_invest - 1]][0];
+        if (koeff > 0) 
+          document.getElementById('first').style.background = "Green";
+        else if (koeff < 0)
+          document.getElementById('first').style.background = "Red";
+        else 
+        document.getElementById('first').style.background = "Orange";
         logger.log(sum_int,koeff,(sum_int*(100 + koeff))/100);
         sum_int = Math.floor((sum_int*(100 + koeff))/100);
         sum = sum_int.toString() + " ₽";
@@ -830,12 +844,14 @@
           }
           sum+= "₽";
           document.getElementById('sum').innerHTML = sum;
+          if (started != amount_of_questions) {
           assistant.sendData({
                   action: {
-                      action_id: 'good'
+                      action_id: 'good',
+                      number: {started}
                   }
               });
-        }
+        }}
         else {
           document.getElementById('second').style.background = "Red";
           if (sum_int > 1000)
@@ -843,12 +859,14 @@
           sum = sum_int.toString()
           sum+= " ₽";
           document.getElementById('sum').innerHTML = sum;
+          if (started != amount_of_questions) {
           assistant.sendData({
                   action: {
-                      action_id: 'bad'
+                      action_id: 'bad',
+                      number: {started}
                   }
               });
-        }
+        }}
         document.getElementById('first').tabIndex = -1;
         document.getElementById('second').tabIndex = -1;
         document.getElementById('third').tabIndex = -1;
@@ -874,6 +892,12 @@
         let sum = document.getElementById('sum').textContent;
         let sum_int = parseInt(sum.replace(/\s/g, "").substring(0,sum.length-1));
         let koeff = koeffs_invest[indexes_invest[started_invest - 1]][1];
+        if (koeff > 0) 
+          document.getElementById('second').style.background = "Green";
+        else if (koeff < 0)
+          document.getElementById('second').style.background = "Red";
+        else 
+          document.getElementById('second').style.background = "Orange";
         logger.log(sum_int,koeff,(sum_int*(100 + koeff))/100);
         sum_int = Math.floor((sum_int*(100 + koeff))/100);
         sum = sum_int.toString() + " ₽";
@@ -915,12 +939,13 @@
           }
           sum+= "₽"; 
           document.getElementById('sum').innerHTML = sum;
+          if (started != amount_of_questions) {
           assistant.sendData({
                   action: {
                       action_id: 'good'
                   }
               });
-        }
+        }}
         else {
           document.getElementById('third').style.background = "Red";
           if (sum_int > 1000)
@@ -928,18 +953,19 @@
           sum = sum_int.toString()
           sum+= " ₽";
           document.getElementById('sum').innerHTML = sum;
+          if (started != amount_of_questions) {
           assistant.sendData({
                   action: {
                       action_id: 'bad'
                   }
               });
-        }
+        }}
         document.getElementById('first').tabIndex = -1;
         document.getElementById('second').tabIndex = -1;
         document.getElementById('third').tabIndex = -1;
         document.getElementById('first').style.visibility= "hidden";
         document.getElementById('second').style.visibility = "hidden";
-        if (started == amount_of_questions) {
+        if (started != amount_of_questions) {
             assistant.sendData({
                   action: {
                       action_id: 'completed'
@@ -959,6 +985,12 @@
         let sum = document.getElementById('sum').textContent;
         let sum_int = parseInt(sum.replace(/\s/g, "").substring(0,sum.length-1));
         let koeff = koeffs_invest[indexes_invest[started_invest - 1]][2];
+        if (koeff > 0) 
+          document.getElementById('third').style.background = "Green";
+        else if (koeff < 0)
+          document.getElementById('third').style.background = "Red";
+        else 
+          document.getElementById('third').style.background = "Orange";
         logger.log(sum_int,koeff,(sum_int*(100 + koeff))/100);
         sum_int = Math.floor((sum_int*(100 + koeff))/100);
         sum = sum_int.toString() + " ₽";
@@ -993,7 +1025,7 @@
     </div>
     <div id = "menu" class = "menu">
         <img src="https://i.ibb.co/wwj0Ghh/logo-mini.png" class = "logo" id = "logo" alt = "Hello"/>
-        <div id = "description" class = "description">Инвестомания – игра про финансовую грамотность!</div>
+        <div id = "description" class = "description">Инвестомания – квиз про финансовую грамотность!</div>
         <button id = "start" class = "start" tabindex = "1" on:click = {() => start()}><div></div>Играть</button>
         <button id = "help" class = "help" tabindex = "2" on:click = {() => rules()} ><div></div>Помощь</button>
     </div>
@@ -1192,7 +1224,7 @@
   justify-content: flex-start;
   text-align: left;
   width: 100%;
-  font-size: 50px;
+  font-size: 300px;
   font-weight: bold;
   color: white;
   margin-top: 5%;
@@ -1217,7 +1249,7 @@
 }
 .close {
   width: 250px;
-  height: 500px;
+  height: 155px;
   background-image: url("https://i.ibb.co/jGdHJMK/close3.png" );
   background-color: Transparent;
   outline: none;
@@ -1228,6 +1260,9 @@
   background-size: 100%;
   margin-bottom: 0;
   float: right;
+}
+.close:focus {
+  outline: solid;
 }
 .table {
     color: white;
@@ -1265,7 +1300,7 @@
     border: 2px solid #ccc;
 }
 .first:focus, .second:focus, .third:focus {
-    box-shadow: #cccccc 0 0 75px;
+    outline: solid;
 }
 }
 @media screen and (max-width: 2200px) and (min-width: 2048px) {
@@ -1312,7 +1347,7 @@
   justify-content: flex-start;
   text-align: left;
   width: 100%;
-  font-size: 50px;
+  font-size: 150px;
   font-weight: bold;
   color: white;
   margin-top: 5%;
@@ -1335,7 +1370,7 @@
 }
 .close {
   width: 120px;
-  height: 240px;
+  height: 80px;
   background-image: url("https://i.ibb.co/jGdHJMK/close3.png" );
   background-color: Transparent;
   outline: none;
@@ -1346,6 +1381,9 @@
   background-size: 100%;
   margin-bottom: 0;
   float: right;
+}
+.close:focus {
+  outline: solid;
 }
 .table {
     color: white;
@@ -1430,7 +1468,7 @@
   justify-content: flex-start;
   text-align: left;
   width: 100%;
-  font-size: 50px;
+  font-size: 120px;
   font-weight: bold;
   color: white;
   margin-top: 5%;
@@ -1453,7 +1491,7 @@
 }
 .close {
   width: 100px;
-  height: 200px;
+  height: 75px;
   background-image: url("https://i.ibb.co/jGdHJMK/close3.png" );
   background-color: Transparent;
   outline: none;
@@ -1464,6 +1502,9 @@
   background-size: 100%;
   margin-bottom: 0;
   float: right;
+}
+.close:focus {
+  outline: solid;
 }
 .table {
     color: white;
@@ -1547,7 +1588,7 @@
   justify-content: flex-start;
   text-align: left;
   width: 100%;
-  font-size: 50px;
+  font-size: 80px;
   font-weight: bold;
   color: white;
   margin-top: 5%;
@@ -1570,7 +1611,7 @@
 }
 .close {
   width: 66px;
-  height: 133px;
+  height: 53px;
   background-image: url("https://i.ibb.co/jGdHJMK/close3.png" );
   background-color: Transparent;
   outline: none;
@@ -1580,6 +1621,9 @@
   overflow: hidden;
   background-size: 100%;
   float: right;
+}
+.close:focus {
+  outline: solid;
 }
 .table {
     color: white;

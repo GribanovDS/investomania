@@ -81,16 +81,22 @@ function* script(r: SberRequest, rs: SberResponse) {
                 rsp.data = {type: 'close'};
             }
             else if (r.act?.action_id === 'good') {
+                console.log(r.act?.number);
+                if (r.act?.number != 10) {
                 rsp.kbrd = ['Оценить','Помощь'];
                 phraseIndex = Math.floor(Math.random() * GuessedRightPhrases.length);
                 rsp.msg = GuessedRightPhrases[phraseIndex];
                 rsp.data = {type: 'good'};
+                }
             }
             else if (r.act?.action_id === 'bad') {
+                console.log(r.act?.number);
+                if (r.act?.number != 10) {
                 rsp.kbrd = ['Оценить','Помощь'];
                 phraseIndex = Math.floor(Math.random() * GuessedWrongPhrases.length);
                 rsp.msg = GuessedWrongPhrases[phraseIndex];
                 rsp.data = {type: 'bad'};
+                }
             }
             else if (r.act?.action_id === 'completed') {
                 rsp.kbrd = ['Оценить','Помощь'];
