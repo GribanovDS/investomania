@@ -8,6 +8,7 @@
 
     const amount_of_questions = 10;
     const amount_of_questions_invest = 5;
+    let ind = -1;
     let howmuch = 0;
     let started = 0;
     let started_invest = 0;
@@ -15,7 +16,7 @@
     let started_from_voice = false;
     let token = "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2NGY5MzMwNjQ3MjJiN2M2Zjc1MTdiNGEwNGU5Y2Q1N2I3YmFhZGU1ZGRhODNlOTU4ZWM5MmZhYTk5ZDUwMTNmNTM5YmU5MjcwMDQyNjI5OCIsImF1ZCI6IlZQUyIsImV4cCI6MTY3MDAxMjI5OCwiaWF0IjoxNjY5OTI1ODg4LCJpc3MiOiJLRVlNQVNURVIiLCJ0eXBlIjoiQmVhcmVyIiwianRpIjoiZTI0NzNmMjgtZjEwOS00ZWZhLTgwMmYtZGM1ZGEwZDQ3NjYyIiwic2lkIjoiZGQwMmY0YTgtNGU3Ni00MzgxLWIyZTktYTk3NWY3YmFlNWMxIn0.fEe1Pw1KewkRO_95bh-jpoq9b3DDkExwvXQuVodT5suEabOzKoZUXBjfIN0e_GhCjiYsDv1HC7J7WGpxdLDKpy-RVo1Yoj1CRPYizNM-NHxu3pk1UBcx82NOw0iRSr81P9aYVlDpCJ-VaYwW6zcONk1g5OELYvC2usAFMeTv_44ymRQcYzkkD1dUiLGsPiAv7rE-O7C_QU06LBrfNXcEcn-qgk2IWn1XWbbCkCBwMTzOq5kzqrN2YnruFZ5OjyNdg97OyONVLPtGDa-uH7hbnwWdyfEzW3Mz42ZyraUugLzOeYWky5MnOPFhnTpiu_NaF_c3HVY9Y_5Lv3ST9j62u-Qd3GRlwj5jV6Qh-4DL7n_fvvNH1iRskkpK7PmD7XHlbd0SXb1DPR2OwgG3s909GNJ8uPEnNvQzVhW4r0BEng4kw61sJ3uLJ3R9J7loflrCZVWqFyOM9Jn99Eqr5an2u75xbv-XTXLmSU5_jQ0A-6DA0RiIE4U71gGK4Z5lQEL9HGGcNbZ5Z9Sl3JBtT7X6ApiGa9lA7qM83ZBNKQkwKsFnw4jLId6v6dasBHpv3FMcXLmQhvagmL7rc5wRX3oCt3KXLXlqG6whHBQVwU0zPntZMB8Kro0uU9t4lFck85XcwfKpLUYaJ0aj5Kl75ZdqgX8jyX_L69u1BNPDCgkITTg";
 // Set the name of your SmartApp for activation
-    let initPhrase = 'запусти Инвестомания';
+    let initPhrase = 'запусти тест';
     let character = 'joy'; // default, before sber client gets state
     let temp = "";
     let questions = [" Финансовая свобода — это… " ,
@@ -396,7 +397,6 @@
 
 
     
-    logger.log(questions.length,answers.length,right_answers.length);
     let used = Array(right_answers.length).fill(false);
     let questions_invest = 
       ["Куда разумнее вложить свои деньги на год?",
@@ -435,32 +435,32 @@
       ["На вклад в банк под 0,9% в месяц","50% в акции, 50% в облигации","Никуда"]
     ];
     let koeffs_invest = 
-      [[Math.floor(Math.random() * 60 - 20), Math.floor(Math.random() * 15 + 5),0],
-      [Math.floor(Math.random() * 28 - 5),Math.floor(Math.random() * 25 - 9),0],
-      [Math.floor(Math.random() * 20 - 6),Math.floor(Math.random() * 14 + 6),0],
-      [Math.floor(Math.random() * 17 + 4),Math.floor(Math.random() * 14 + 6),0],
-      [Math.floor(Math.random() * 28 - 5),Math.floor(Math.random() * 50 - 16),0],
-      [Math.floor(Math.random() * 14 + 6),Math.floor(Math.random() * 50 - 18),0],
-      [Math.floor(Math.random() * 22 - 7),Math.floor(Math.random() * 55 - 19),0],
-      [Math.floor(Math.random() * 60 - 20),Math.floor(Math.random() * 28 - 5),0],
-      [Math.floor(Math.random() * 46 - 20),11,0],
-      [9,Math.floor(Math.random() * 20 - 6),0],
-      [10,Math.floor(Math.random() * 25 - 9),0],
-      [Math.floor(Math.random() * 60 - 30),8,0],
-      [Math.floor(Math.random() * 46 - 20),Math.floor(Math.random() * 60 - 20),0],
-      [Math.floor(Math.random() * 50 - 16),Math.floor(Math.random() * 25 - 9),0],
-      [Math.floor(Math.random() * 50 - 18),Math.floor(Math.random() * 25 - 9),0],
-      [Math.floor(Math.random() * 55 - 19),Math.floor(Math.random() * 17 + 4),0],
-      [Math.floor(Math.random() * 33 - 8),Math.floor(Math.random() * 61 - 15),0],
-      [Math.floor(Math.random() * 33 - 8),Math.floor(Math.random() * 24 - 4),0],
-      [Math.floor(Math.random() * 33 - 8),Math.floor(Math.random() * 22 - 2),0],
-      [Math.floor(Math.random() * 60 - 20),Math.floor(Math.random() * 33 - 8),0],
-      [Math.floor(Math.random() * 15 + 5),Math.floor(Math.random() * 33 - 8),0],
-      [Math.floor(Math.random() * 60 - 20),Math.floor(Math.random() * 22 - 2),0],
-      [Math.floor(Math.random() * 15 + 5),Math.floor(Math.random() * 22 - 2),0],
-      [12,Math.floor(Math.random() * 33 - 8),0],
-      [14,Math.floor(Math.random() * 33 - 8),0],
-      [11,Math.floor(Math.random() * 33 - 8),0]
+      [[Math.floor(Math.random() * 60 - 22), Math.floor(Math.random() * 15 + 3),0],
+      [Math.floor(Math.random() * 28 - 8),Math.floor(Math.random() * 25 - 16),0],
+      [Math.floor(Math.random() * 20 - 9),Math.floor(Math.random() * 14 + 2),0],
+      [Math.floor(Math.random() * 17 + 2),Math.floor(Math.random() * 14 + 2),0],
+      [Math.floor(Math.random() * 28 - 8),Math.floor(Math.random() * 50 - 19),0],
+      [Math.floor(Math.random() * 14 + 1),Math.floor(Math.random() * 50 - 21),0],
+      [Math.floor(Math.random() * 22 - 10),Math.floor(Math.random() * 55 - 21),0],
+      [Math.floor(Math.random() * 60 - 23),Math.floor(Math.random() * 28 - 8),0],
+      [Math.floor(Math.random() * 46 - 21),11,0],
+      [9,Math.floor(Math.random() * 20 - 11),0],
+      [10,Math.floor(Math.random() * 25 - 14),0],
+      [Math.floor(Math.random() * 60 - 35),8,0],
+      [Math.floor(Math.random() * 46 - 25),Math.floor(Math.random() * 60 - 23),0],
+      [Math.floor(Math.random() * 50 - 21),Math.floor(Math.random() * 25 - 12),0],
+      [Math.floor(Math.random() * 50 - 23),Math.floor(Math.random() * 25 - 12),0],
+      [Math.floor(Math.random() * 55 - 22),Math.floor(Math.random() * 17 + 1),0],
+      [Math.floor(Math.random() * 33 - 11),Math.floor(Math.random() * 61 - 18),0],
+      [Math.floor(Math.random() * 33 - 11),Math.floor(Math.random() * 24 - 7),0],
+      [Math.floor(Math.random() * 33 - 11),Math.floor(Math.random() * 22 - 5),0],
+      [Math.floor(Math.random() * 60 - 23),Math.floor(Math.random() * 33 - 11),0],
+      [Math.floor(Math.random() * 15 + 2),Math.floor(Math.random() * 33 - 11),0],
+      [Math.floor(Math.random() * 60 - 23),Math.floor(Math.random() * 22 - 5),0],
+      [Math.floor(Math.random() * 15 + 2),Math.floor(Math.random() * 22 - 5),0],
+      [12,Math.floor(Math.random() * 33 - 11),0],
+      [14,Math.floor(Math.random() * 33 - 1),0],
+      [11,Math.floor(Math.random() * 33 - 11),0]
       ];
 
 
@@ -652,17 +652,16 @@
       }
       while (count_invest != amount_of_questions_invest) {
         i = Math.floor(Math.random() * answers_invest.length);
-        logger.log(i);
         if (used_invest[i] == false) {
           used_invest[i] = true;
           indexes_invest[count_invest] = i;
           count_invest++;
         }
       }
-    }
-    logger.log(indexes);
-    const add_questions_invest = () => {
+      logger.log(indexes);
       logger.log(indexes_invest);
+    }
+    const add_questions_invest = () => {
       logger.log(started_invest);
       let i = indexes_invest[started_invest];
       // let j1 = Math.floor(Math.random() * answers_invest[i].length);
@@ -674,6 +673,10 @@
       //   j3 = Math.floor(Math.random() * answers_invest[i].length);
       logger.log(i);
       let j = Math.floor(Math.random()*questions_invest.length);
+      while (j == ind) {
+        j = Math.floor(Math.random()*questions_invest.length);
+      }
+      ind = j;
       let question = questions_invest[j];
       let answer1 = answers_invest[i][0];
       let answer2 = answers_invest[i][1];
@@ -688,12 +691,13 @@
       document.getElementById('first').tabIndex = 1;
       document.getElementById('second').tabIndex = 2;
       document.getElementById('third').tabIndex = 3;
-      document.getElementById('first').style.visibility = "visible"
-      document.getElementById('second').style.visibility = "visible"
-      document.getElementById('third').style.visibility = "visible"
+      document.getElementById('first').style.visibility = "visible";
+      document.getElementById('second').style.visibility = "visible";
+      document.getElementById('third').style.visibility = "visible";
     }
 
     const add_question = () => {
+      logger.log(started)
       let i = indexes[started];
       let j1 = Math.floor(Math.random() * answers[i].length);
       let j2 = Math.floor(Math.random() * answers[i].length);
@@ -797,10 +801,25 @@
         let sum = document.getElementById('sum').textContent;
         let sum_int = parseInt(sum.replace(/\s/g, "").substring(0,sum.length-1));
         let koeff = koeffs_invest[indexes_invest[started_invest - 1]][0];
-        if (koeff > 0) 
+        if (koeff > 0) {
           document.getElementById('first').style.background = "Green";
-        else if (koeff < 0)
-          document.getElementById('first').style.background = "Red";
+          if (started_invest != amount_of_questions_invest) {
+          assistant.sendData({
+                  action: {
+                      action_id: 'good'
+                  }
+              });
+        }
+        }
+        else if (koeff < 0) {
+        document.getElementById('first').style.background = "Red";
+        if (started_invest != amount_of_questions_invest) {
+        assistant.sendData({
+                action: {
+                    action_id: 'bad'
+                }
+            });
+        }}
         else 
         document.getElementById('first').style.background = "Orange";
         logger.log(sum_int,koeff,(sum_int*(100 + koeff))/100);
@@ -847,8 +866,7 @@
           if (started != amount_of_questions) {
           assistant.sendData({
                   action: {
-                      action_id: 'good',
-                      number: {started}
+                      action_id: 'good'
                   }
               });
         }}
@@ -892,10 +910,26 @@
         let sum = document.getElementById('sum').textContent;
         let sum_int = parseInt(sum.replace(/\s/g, "").substring(0,sum.length-1));
         let koeff = koeffs_invest[indexes_invest[started_invest - 1]][1];
-        if (koeff > 0) 
+        if (koeff > 0) {
           document.getElementById('second').style.background = "Green";
-        else if (koeff < 0)
+          if (started_invest != amount_of_questions_invest) {
+          assistant.sendData({
+                  action: {
+                      action_id: 'good'
+                  }
+              });
+        }
+        }
+        else if (koeff < 0) {
           document.getElementById('second').style.background = "Red";
+          if (started_invest != amount_of_questions_invest) {
+          assistant.sendData({
+                  action: {
+                      action_id: 'bad'
+                  }
+              });
+        }
+        }
         else 
           document.getElementById('second').style.background = "Orange";
         logger.log(sum_int,koeff,(sum_int*(100 + koeff))/100);
@@ -965,7 +999,8 @@
         document.getElementById('third').tabIndex = -1;
         document.getElementById('first').style.visibility= "hidden";
         document.getElementById('second').style.visibility = "hidden";
-        if (started != amount_of_questions) {
+        if (started == amount_of_questions) {
+          logger.log(started,amount_of_questions);
             assistant.sendData({
                   action: {
                       action_id: 'completed'
@@ -985,10 +1020,25 @@
         let sum = document.getElementById('sum').textContent;
         let sum_int = parseInt(sum.replace(/\s/g, "").substring(0,sum.length-1));
         let koeff = koeffs_invest[indexes_invest[started_invest - 1]][2];
-        if (koeff > 0) 
-          document.getElementById('third').style.background = "Green";
-        else if (koeff < 0)
+        if (koeff > 0) {
+            document.getElementById('third').style.background = "Green";
+          if (started_invest != amount_of_questions_invest) {
+          assistant.sendData({
+                  action: {
+                      action_id: 'good'
+                  }
+              });
+        }
+        }
+        else if (koeff < 0) {
           document.getElementById('third').style.background = "Red";
+          if (started_invest != amount_of_questions_invest) {
+          assistant.sendData({
+                  action: {
+                      action_id: 'bad'
+                  }
+              });
+        }}
         else 
           document.getElementById('third').style.background = "Orange";
         logger.log(sum_int,koeff,(sum_int*(100 + koeff))/100);
