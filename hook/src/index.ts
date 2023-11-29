@@ -4,7 +4,7 @@ const textToCommand = (texts: string[]) => {
     let text = texts.join(' ');
     text = text.toLocaleLowerCase();
 
-    let smartapp = ['инвестомани'];
+    let smartapp = ['финансова'];
     let start = ['начни','играть','начать','игр']
     let greet = ['привет','добрый','салют','доброе','здравствуй'];
     let help = ['помо','справка','что делать'];
