@@ -16,7 +16,7 @@
     let started_from_voice = false;
     let token = "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2NGY5MzMwNjQ3MjJiN2M2Zjc1MTdiNGEwNGU5Y2Q1N2I3YmFhZGU1ZGRhODNlOTU4ZWM5MmZhYTk5ZDUwMTNmNTM5YmU5MjcwMDQyNjI5OCIsImF1ZCI6IlZQUyIsImV4cCI6MTY3MDAxMjI5OCwiaWF0IjoxNjY5OTI1ODg4LCJpc3MiOiJLRVlNQVNURVIiLCJ0eXBlIjoiQmVhcmVyIiwianRpIjoiZTI0NzNmMjgtZjEwOS00ZWZhLTgwMmYtZGM1ZGEwZDQ3NjYyIiwic2lkIjoiZGQwMmY0YTgtNGU3Ni00MzgxLWIyZTktYTk3NWY3YmFlNWMxIn0.fEe1Pw1KewkRO_95bh-jpoq9b3DDkExwvXQuVodT5suEabOzKoZUXBjfIN0e_GhCjiYsDv1HC7J7WGpxdLDKpy-RVo1Yoj1CRPYizNM-NHxu3pk1UBcx82NOw0iRSr81P9aYVlDpCJ-VaYwW6zcONk1g5OELYvC2usAFMeTv_44ymRQcYzkkD1dUiLGsPiAv7rE-O7C_QU06LBrfNXcEcn-qgk2IWn1XWbbCkCBwMTzOq5kzqrN2YnruFZ5OjyNdg97OyONVLPtGDa-uH7hbnwWdyfEzW3Mz42ZyraUugLzOeYWky5MnOPFhnTpiu_NaF_c3HVY9Y_5Lv3ST9j62u-Qd3GRlwj5jV6Qh-4DL7n_fvvNH1iRskkpK7PmD7XHlbd0SXb1DPR2OwgG3s909GNJ8uPEnNvQzVhW4r0BEng4kw61sJ3uLJ3R9J7loflrCZVWqFyOM9Jn99Eqr5an2u75xbv-XTXLmSU5_jQ0A-6DA0RiIE4U71gGK4Z5lQEL9HGGcNbZ5Z9Sl3JBtT7X6ApiGa9lA7qM83ZBNKQkwKsFnw4jLId6v6dasBHpv3FMcXLmQhvagmL7rc5wRX3oCt3KXLXlqG6whHBQVwU0zPntZMB8Kro0uU9t4lFck85XcwfKpLUYaJ0aj5Kl75ZdqgX8jyX_L69u1BNPDCgkITTg";
 // Set the name of your SmartApp for activation
-    let initPhrase = 'запусти Инвестомания: Финансовый Квиз';
+    let initPhrase = 'запусти Финансовую Грамотность';
     let character = 'joy'; // default, before sber client gets state
     let temp = "";
     let questions = [" Финансовая свобода — это… " ,
