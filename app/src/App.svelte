@@ -1151,7 +1151,7 @@
   overflow: hidden; 
 }
 .start:focus, .help:focus {
-  box-shadow: greenyellow 0 0 75px;
+  box-shadow: greenyellow 0 0 100px;
 }
 .start {
   margin-top: 5%;
@@ -1477,7 +1477,7 @@
     margin-left: 25%;
 }
 .first:focus, .second:focus, .third:focus {
-    box-shadow: #cccccc 0 0 60px;
+    box-shadow: #cccccc 0 0 100px;
 }
 
 }
@@ -1598,7 +1598,7 @@
     margin-left: 25%;
 }
 .first:focus, .second:focus, .third:focus {
-    box-shadow: #cccccc 0 0 55px;
+    box-shadow: #cccccc 0 0 90px;
 }
 }
 @media screen and (max-width: 1300px) {
@@ -1714,7 +1714,7 @@
     margin-left: 25%;
 }
 .first:focus, .second:focus, .third:focus {
-    box-shadow: #cccccc 0 0 45px;
+    box-shadow: #cccccc 0 0 80px;
 }
 }
 
