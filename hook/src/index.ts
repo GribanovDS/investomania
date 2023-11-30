@@ -98,6 +98,14 @@ function* script(r: SberRequest, rs: SberResponse) {
                 rsp.data = {type: 'bad'};
                 }
             }
+            else if (r.act?.action_id === 'norm') {
+                console.log(r.act?.number);
+                if (r.act?.number != 10) {
+                rsp.kbrd = ['Оценить','Помощь'];
+                rsp.msg = 'Ничего не заработано, но ничего и не потеряно!';
+                rsp.data = {type: 'norm'};
+                }
+            }
             else if (r.act?.action_id === 'completed') {
                 rsp.kbrd = ['Оценить','Помощь'];
                 rsp.msg = `Поздравляю! Первый блок вопросов подошёл к концу`;
