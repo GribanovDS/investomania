@@ -1083,8 +1083,8 @@
     <div id = "menu" class = "menu">
         <img src="https://i.ibb.co/wwj0Ghh/logo-mini.png" class = "logo" id = "logo" alt = "Hello"/>
         <div id = "description" class = "description">Викторина про финансовую грамотность!</div>
-        <button id = "start" class = "start" tabindex = "1" on:click = {() => start()}><div></div>Играть</button>
-        <button id = "help" class = "help" tabindex = "2" on:click = {() => rules()} ><div></div>Помощь</button>
+        <button id = "start" class = "start" tabindex = "1" on:click = {() => start()}><div></div></button>
+        <button id = "help" class = "help" tabindex = "2" on:click = {() => rules()} ><div></div></button>
     </div>
     <div id = "game" class = "game">
       <div id = "money" class = "money">
