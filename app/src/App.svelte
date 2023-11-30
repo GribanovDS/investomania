@@ -809,8 +809,7 @@
                       action_id: 'good'
                   }
               });
-        }
-        }
+        }}
         else if (koeff < 0) {
         document.getElementById('first').style.background = "Red";
         if (started_invest != amount_of_questions_invest) {
@@ -828,7 +827,7 @@
                     action_id: 'norm'
                 }
             });
-        }
+        }}
         logger.log(sum_int,koeff,(sum_int*(100 + koeff))/100);
         sum_int = Math.floor((sum_int*(100 + koeff))/100);
         sum = sum_int.toString() + " ₽";
