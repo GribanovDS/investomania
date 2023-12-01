@@ -931,10 +931,16 @@
                       action_id: 'bad'
                   }
               });
-        }
-        }
-        else 
-          document.getElementById('second').style.background = "Orange";
+        }}
+        else {
+        document.getElementById('first').style.background = "Orange";
+        if (started_invest != amount_of_questions_invest) {
+        assistant.sendData({
+                action: {
+                    action_id: 'norm'
+                }
+            });
+        }}
         logger.log(sum_int,koeff,(sum_int*(100 + koeff))/100);
         sum_int = Math.floor((sum_int*(100 + koeff))/100);
         sum = sum_int.toString() + " ₽";
@@ -1042,8 +1048,15 @@
                   }
               });
         }}
-        else 
-          document.getElementById('third').style.background = "Orange";
+        else {
+        document.getElementById('first').style.background = "Orange";
+        if (started_invest != amount_of_questions_invest) {
+        assistant.sendData({
+                action: {
+                    action_id: 'norm'
+                }
+            });
+        }}
         logger.log(sum_int,koeff,(sum_int*(100 + koeff))/100);
         sum_int = Math.floor((sum_int*(100 + koeff))/100);
         sum = sum_int.toString() + " ₽";
