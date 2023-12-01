@@ -1229,7 +1229,7 @@
 
 .start:focus div:before, .help:focus div:before {
   letter-spacing: 3px;
-  opacity: 0.99;
+  opacity: 0.5;
   transform: scale(4);
 }
 
@@ -1476,7 +1476,7 @@
     margin-left: 25%;
 }
 .first:focus, .second:focus, .third:focus, .first:hover, .second:hover, .third:hover {
-    box-shadow: inset 0 0 100px 100px rgb(255,255,255);
+    box-shadow: inset 0 0 20px 20px rgb(255,255,255);
     background-color: rgb(63, 64, 57);
 }
 
@@ -1598,7 +1598,7 @@
     margin-left: 25%;
 }
 .first:focus, .second:focus, .third:focus, .first:hover, .second:hover, .third:hover {
-    box-shadow: inset 0 0 90px 90px rgb(255,255,255);
+    box-shadow: inset 0 0 15px 15px rgb(255,255,255);
     background-color: rgb(63, 64, 57);
 }
 }
@@ -1715,7 +1715,7 @@
     margin-left: 25%;
 }
 .first:focus, .second:focus, .third:focus, .first:hover, .second:hover, .third:hover {
-    box-shadow: inset 0 0 80px 80px rgb(255,255,255);;
+    box-shadow: inset 0 0 10px 10px rgb(255,255,255);;
     background-color: rgb(63, 64, 57);
 }
 }
