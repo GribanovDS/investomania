@@ -1229,7 +1229,7 @@
 
 .start:focus div:before, .help:focus div:before {
   letter-spacing: 3px;
-  opacity: 0;
+  opacity: 0.99;
   transform: scale(4);
 }
 
