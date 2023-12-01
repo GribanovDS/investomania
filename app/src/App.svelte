@@ -1476,7 +1476,7 @@
     margin-left: 25%;
 }
 .first:focus, .second:focus, .third:focus, .first:hover, .second:hover, .third:hover {
-    box-shadow: #cccccc 0 0 100px;
+    box-shadow: inset 0 0 100px 100px rgb(255,255,255);
     background-color: rgb(63, 64, 57);
 }
 
@@ -1598,7 +1598,7 @@
     margin-left: 25%;
 }
 .first:focus, .second:focus, .third:focus, .first:hover, .second:hover, .third:hover {
-    box-shadow: #cccccc 0 0 90px;
+    box-shadow: inset 0 0 90px 90px rgb(255,255,255);
     background-color: rgb(63, 64, 57);
 }
 }
@@ -1715,7 +1715,7 @@
     margin-left: 25%;
 }
 .first:focus, .second:focus, .third:focus, .first:hover, .second:hover, .third:hover {
-    box-shadow: #cccccc 0 0 80px;
+    box-shadow: inset 0 0 80px 80px rgb(255,255,255);;
     background-color: rgb(63, 64, 57);
 }
 }
