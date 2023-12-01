@@ -1477,7 +1477,7 @@
 }
 .first:focus, .second:focus, .third:focus, .first:hover, .second:hover, .third:hover {
     box-shadow: #cccccc 0 0 100px;
-    background: rgb(63, 64, 57);
+    background-color: rgb(63, 64, 57);
 }
 
 }
@@ -1599,7 +1599,7 @@
 }
 .first:focus, .second:focus, .third:focus, .first:hover, .second:hover, .third:hover {
     box-shadow: #cccccc 0 0 90px;
-    background: rgb(63, 64, 57);
+    background-color: rgb(63, 64, 57);
 }
 }
 @media screen and (max-width: 1300px) {
@@ -1716,7 +1716,7 @@
 }
 .first:focus, .second:focus, .third:focus, .first:hover, .second:hover, .third:hover {
     box-shadow: #cccccc 0 0 80px;
-    background: rgb(63, 64, 57);
+    background-color: rgb(63, 64, 57);
 }
 }
 
