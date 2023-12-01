@@ -586,7 +586,7 @@
             });
     }
     const close = () => {
-      if (window.document.body.className == 'start' || window.document.body.className == 'start invest') {
+      //if (window.document.body.className == 'start' || window.document.body.className == 'start invest') {
         window.document.body.className = '';
         started = 0;
         started_invest = 0;
@@ -597,7 +597,7 @@
         document.getElementById('first').tabIndex = -1;
         document.getElementById('second').tabIndex = -1;
         document.getElementById('third').tabIndex = -1;
-      }
+      //}
     }
     document.addEventListener('keydown', function(event) {    
         switch(event.keyCode) { 
