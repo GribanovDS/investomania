@@ -563,7 +563,6 @@
     }
     const start = () => {
       document.getElementById('game').style.display="none";
-      document.getElementById('table').style.display="none";
       window.document.body.className = ''
       window.document.body.classList.toggle('start');
       loading_start();
