@@ -532,7 +532,7 @@
       document.getElementById('sum').style.display="block";
       document.getElementById('prepare').style.display="none";
       document.getElementById('game').style.display="flex";
-      document.getElementById('table').style.display="flex";
+      document.getElementById('table').style.display="block";
       document.getElementById('start').tabIndex = -1;
       document.getElementById('help').tabIndex = -1;
       document.getElementById('first').tabIndex = 1;
@@ -551,7 +551,7 @@
     }
     const loading_end2 = () => {
       document.getElementById('game').style.display="flex";
-      document.getElementById('table').style.display="flex";
+      document.getElementById('table').style.display="block";
       document.getElementById('prepare').style.display="none";
       document.getElementById('moneybox').style.display="none";
       document.getElementById('first').style.display="none";
