@@ -727,6 +727,11 @@ setTimeout(start_invest, 3000);
       document.getElementById('third').style.visibility = "visible"
     }
 
+    const ishidden = elem => {
+      const styles = window.getComputedStyle(elem)
+      return styles.display === 'none' || styles.visibility === 'hidden'
+    }
+
     const first = () => {
       if (window.document.body.className == 'start') {
         let right_answer = right_answers[indexes[started]];
@@ -786,7 +791,7 @@ setTimeout(start_invest, 3000);
       }
       else if (window.document.body.className == 'start invest') {
         let answer = document.getElementById('firstt').textContent;
-        if (document.getElementById('second').style.visibility == "hidden" and document.getElementById('third').style.visibility == "hidden") {
+        if (ishidden(document.getElementById('second')) and ishidden(document.getElementById('third'))) {
           return
         }
         temp = answer;
@@ -901,7 +906,7 @@ setTimeout(start_invest, 3000);
       }
       else if (window.document.body.className == 'start invest') {
         let answer = document.getElementById('secondt').textContent;
-        if (document.getElementById('first').style.visibility == "hidden" and document.getElementById('third').style.visibility == "hidden") {
+        if (ishidden(document.getElementById('first')) and ishidden(document.getElementById('third'))) {
           return
         }
         temp = answer;
@@ -1017,7 +1022,7 @@ setTimeout(start_invest, 3000);
       }
       else if (window.document.body.className == 'start invest') {
         let answer = document.getElementById('thirdt').textContent;
-        if (document.getElementById('second').style.visibility == "hidden" and document.getElementById('first').style.visibility == "hidden") {
+        if (ishidden(document.getElementById('second')) and ishidden(document.getElementById('first'))) {
           return
         }
         temp = answer;
