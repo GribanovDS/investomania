@@ -562,21 +562,17 @@
       add_questions_invest();
     }
     const start = () => {
-      window.document.body.classList.toggle('start');
-      loading_start();
-      choose_questions();
-      // if (!started_from_voice) {
-      // assistant.sendData({
-      //           action: {
-      //               action_id: 'start'
-      //           }
-      //       });
-      // }
+setTimeout(loading_start2, 3000);
+setTimeout(loading_end, 6000);
+setTimeout(start_invest, 3000);
+      //window.document.body.classList.toggle('start');
+      //loading_start();
+      //choose_questions();
       document.getElementById('sum').innerHTML = "10 000₽"
-      started_from_voice = false;
-      howmuch++;
-       setTimeout(loading_end, 5000);
-       setTimeout(add_question, 1000);
+      //started_from_voice = false;
+      //howmuch++;
+      // setTimeout(loading_end, 5000);
+      // setTimeout(add_question, 1000);
    }
     const rules = () => {  
       assistant.sendData({
