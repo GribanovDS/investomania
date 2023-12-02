@@ -562,17 +562,17 @@
       add_questions_invest();
     }
     const start = () => {
-setTimeout(loading_start2, 3000);
-setTimeout(loading_end, 6000);
-setTimeout(start_invest, 3000);
-      //window.document.body.classList.toggle('start');
-      //loading_start();
-      //choose_questions();
+      document.getElementById('game').style.display="none";
+      document.getElementById('table').style.display="none";
+      window.document.body.className = ''
+      window.document.body.classList.toggle('start');
+      loading_start();
+      choose_questions();
       document.getElementById('sum').innerHTML = "10 000₽"
-      //started_from_voice = false;
-      //howmuch++;
-      // setTimeout(loading_end, 5000);
-      // setTimeout(add_question, 1000);
+      started_from_voice = false;
+      howmuch++;
+      setTimeout(loading_end, 5000);
+      setTimeout(add_question, 1000);
    }
     const rules = () => {  
       assistant.sendData({
@@ -588,6 +588,7 @@ setTimeout(start_invest, 3000);
         started_invest = 0;
         document.getElementById('menu').style.display="block";
         document.getElementById('game').style.display="none";
+        document.getElementById('table').style.display="none";
         document.getElementById('start').tabIndex = 1;
         document.getElementById('help').tabIndex = 2;
         document.getElementById('first').tabIndex = -1;
