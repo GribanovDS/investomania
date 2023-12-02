@@ -8,12 +8,15 @@ const textToCommand = (texts: string[]) => {
     let start = ['начни','играть','начать','игр']
     let greet = ['привет','добрый','салют','доброе','здравствуй'];
     let help = ['помо','справка','что делать'];
-    let close = ['закончить','стоп','конец','останови','заново', 'главн', 'меню']
+    let close = ['закончить','стоп','конец','останови','заново', 'главн', 'меню'/ 'начать заново']
     let rules = ['правила','мануал']
     let value = ['оцен'];
 
     for (let dir of smartapp) {
         if (text.includes(dir)) return {type: 'smartapp'};
+    }
+    for (let dir of close) {
+        if (text.includes(dir)) return {type: 'close'};
     }
     for (let dir of start) {
         if (text.includes(dir)) return {type: 'start'};
@@ -26,9 +29,6 @@ const textToCommand = (texts: string[]) => {
     }
     for (let dir of greet) {
         if (text.includes(dir)) return {type: 'greet'};
-    }
-    for (let dir of close) {
-        if (text.includes(dir)) return {type: 'close'};
     }
     for (let dir of value) {
         if (text.includes(dir)) return {type: 'value'};
