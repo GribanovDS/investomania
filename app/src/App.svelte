@@ -791,7 +791,7 @@ setTimeout(start_invest, 3000);
       }
       else if (window.document.body.className == 'start invest') {
         let answer = document.getElementById('firstt').textContent;
-        if (ishidden(document.getElementById('second')) and ishidden(document.getElementById('third'))) {
+        if (ishidden(document.getElementById('second')) && ishidden(document.getElementById('third'))) {
           return
         }
         temp = answer;
@@ -906,7 +906,7 @@ setTimeout(start_invest, 3000);
       }
       else if (window.document.body.className == 'start invest') {
         let answer = document.getElementById('secondt').textContent;
-        if (ishidden(document.getElementById('first')) and ishidden(document.getElementById('third'))) {
+        if (ishidden(document.getElementById('first')) && ishidden(document.getElementById('third'))) {
           return
         }
         temp = answer;
@@ -1022,7 +1022,7 @@ setTimeout(start_invest, 3000);
       }
       else if (window.document.body.className == 'start invest') {
         let answer = document.getElementById('thirdt').textContent;
-        if (ishidden(document.getElementById('second')) and ishidden(document.getElementById('first'))) {
+        if (ishidden(document.getElementById('second')) && ishidden(document.getElementById('first'))) {
           return
         }
         temp = answer;
