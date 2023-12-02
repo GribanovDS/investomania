@@ -731,7 +731,7 @@ setTimeout(start_invest, 3000);
       if (window.document.body.className == 'start') {
         let right_answer = right_answers[indexes[started]];
         let answer = document.getElementById('firstt').textContent;
-        if (answer == temp) {
+        if (answer == temp and answer != 'Никуда') {
           return
         }
         temp = answer;
@@ -786,7 +786,7 @@ setTimeout(start_invest, 3000);
       }
       else if (window.document.body.className == 'start invest') {
         let answer = document.getElementById('firstt').textContent;
-        if (answer == temp) {
+        if (answer == temp and answer != 'Никуда') {
           return
         }
         temp = answer;
@@ -845,7 +845,7 @@ setTimeout(start_invest, 3000);
       if (window.document.body.className == 'start') {
         let right_answer = right_answers[indexes[started]];
         let answer = document.getElementById('secondt').textContent;
-        if (answer == temp) {
+        if (answer == temp and answer != 'Никуда') {
           return
         }
         temp = answer;
@@ -901,7 +901,7 @@ setTimeout(start_invest, 3000);
       }
       else if (window.document.body.className == 'start invest') {
         let answer = document.getElementById('secondt').textContent;
-        if (answer == temp) {
+        if (answer == temp and answer != 'Никуда') {
           return
         }
         temp = answer;
@@ -961,7 +961,7 @@ setTimeout(start_invest, 3000);
       if (window.document.body.className == 'start') {
         let right_answer = right_answers[indexes[started]];
         let answer = document.getElementById('thirdt').textContent;
-        if (answer == temp) {
+        if (answer == temp and answer != 'Никуда') {
           return
         }
         temp = answer;    
@@ -1017,7 +1017,7 @@ setTimeout(start_invest, 3000);
       }
       else if (window.document.body.className == 'start invest') {
         let answer = document.getElementById('thirdt').textContent;
-        if (answer == temp) {
+        if (answer == temp and answer != 'Никуда') {
           return
         }
         temp = answer;
