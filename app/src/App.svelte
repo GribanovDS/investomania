@@ -1123,7 +1123,7 @@
 <style>
 :global(body) {
   background: rgb(212,57,213);
-  background: linear-gradient(135deg, rgba(212,57,213,1) 0%, rgba(157,39,99,1) 100%);
+  background: linear-gradient(135deg, rgba(152,57,103,1) 0%, rgba(107,39,249,1) 100%);
 }
 .container {
   text-align: center;
