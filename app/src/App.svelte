@@ -496,7 +496,12 @@
                 }
                 else if (event.smart_app_data.type === 'start') {
                   started_from_voice = true;
-                  start();
+                  if (window.document.body.className == 'start invest') {
+                      close();
+                  }
+                  else {
+                      start();
+                  }
                 }
                 else if (event.smart_app_data.type === 'close') {
                   loading_end();
